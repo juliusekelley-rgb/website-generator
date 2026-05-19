@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>J&amp;M Construction Services | North Texas Contractor</title>
+  <meta name="description" content="J&amp;M Construction Services — North Texas. Junk removal, demolition, flooring, tile work, fencing, and finish carpentry. Owner-operated. Call 682-468-6428 for a free estimate.">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+    :root {
+      --primary: #1B3A5C;
+      --accent:  #D4A843;
+      --dark:    #111827;
+      --light:   #F8F9FA;
+      --white:   #ffffff;
+      --radius:  8px;
+      --shadow:  0 4px 24px rgba(0,0,0,0.10);
+      --max-w:   1200px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      color: var(--dark);
+      line-height: 1.6;
+      font-size: 16px;
+    }
+
+    .container {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* ── HEADER ── */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--white);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+    }
+    .site-header .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 0.875rem;
+      padding-bottom: 0.875rem;
+    }
+    .logo {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+    .logo-main {
+      font-size: 1.4rem;
+      font-weight: 900;
+      color: var(--primary);
+      letter-spacing: -0.02em;
+    }
+    .logo-main em {
+      font-style: normal;
+      color: var(--accent);
+    }
+    .logo-sub {
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--primary);
+      opacity: 0.65;
+    }
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1.75rem;
+      list-style: none;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--dark);
+      font-weight: 500;
+      font-size: 0.9375rem;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--primary); }
+    .header-phone {
+      font-size: 1.0625rem;
+      font-weight: 800;
+      color: var(--accent);
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .header-phone:hover { opacity: 0.85; }
+
+    /* ── BUTTONS ── */
+    .btn {
+      display: inline-block;
+      padding: 1rem 2.5rem;
+      border-radius: 50px;
+      font-size: 1.0625rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+      cursor: pointer;
+      border: none;
+      font-family: inherit;
+      letter-spacing: 0.01em;
+    }
+    .btn-accent {
+      background: var(--accent);
+      color: var(--dark);
+      box-shadow: 0 4px 20px rgba(212,168,67,0.35);
+    }
+    .btn-accent:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(212,168,67,0.50);
+    }
+    .btn-full {
+      width: 100%;
+      text-align: center;
+      padding: 1rem;
+      border-radius: var(--radius);
+    }
+
+    /* ── HERO ── */
+    #hero {
+      min-height: 100vh;
+      background: linear-gradient(140deg, var(--dark) 0%, var(--primary) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 7rem 1.5rem 5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    #hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 60px,
+        rgba(255,255,255,0.02) 60px,
+        rgba(255,255,255,0.02) 61px
+      ),
+      repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 60px,
+        rgba(255,255,255,0.02) 60px,
+        rgba(255,255,255,0.02) 61px
+      );
+    }
+    .hero-inner {
+      position: relative;
+      max-width: 820px;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(212,168,67,0.15);
+      border: 1px solid rgba(212,168,67,0.45);
+      color: var(--accent);
+      font-size: 0.8125rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.4rem 1.1rem;
+      border-radius: 50px;
+      margin-bottom: 1.75rem;
+    }
+    #hero h1 {
+      font-size: clamp(2.1rem, 5.5vw, 3.75rem);
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 1.375rem;
+      letter-spacing: -0.025em;
+    }
+    #hero h1 em {
+      font-style: normal;
+      color: var(--accent);
+    }
+    .hero-subtitle {
+      font-size: clamp(1rem, 2.5vw, 1.25rem);
+      color: rgba(255,255,255,0.80);
+      max-width: 620px;
+      margin: 0 auto 2.5rem;
+      line-height: 1.65;
+    }
+    .cta-group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.875rem;
+    }
+    .cta-subtext {
+      color: rgba(255,255,255,0.60);
+      font-size: 0.875rem;
+    }
+
+    /* ── TRUST BAR ── */
+    .trust-bar {
+      background: var(--primary);
+      padding: 1.125rem 0;
+    }
+    .trust-bar .container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: rgba(255,255,255,0.88);
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+    .trust-item .check {
+      color: var(--accent);
+      font-weight: 900;
+      font-size: 1rem;
+    }
+
+    /* ── SECTION COMMON ── */
+    section { padding: 5rem 0; }
+    .section-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .section-label {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.625rem;
+    }
+    .section-header h2 {
+      font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+      font-weight: 800;
+      color: var(--primary);
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+    .section-header p {
+      margin-top: 0.75rem;
+      font-size: 1.0625rem;
+      color: #64748b;
+      max-width: 560px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* ── SERVICES ── */
+    #services { background: var(--white); }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+    .service-card {
+      background: var(--white);
+      border: 1.5px solid #e2e8f0;
+      border-radius: var(--radius);
+      padding: 2rem;
+      box-shadow: var(--shadow);
+      transition: transform 0.22s, border-color 0.22s, box-shadow 0.22s;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .service-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent);
+      box-shadow: 0 10px 36px rgba(0,0,0,0.13);
+    }
+    .service-icon { font-size: 2.25rem; line-height: 1; }
+    .service-card h3 {
+      font-size: 1.1875rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .service-card p {
+      color: #475569;
+      font-size: 0.9375rem;
+      line-height: 1.65;
+      flex: 1;
+    }
+    .service-highlight {
+      margin-top: 0.25rem;
+      font-size: 0.775rem;
+      font-weight: 700;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+    }
+
+    /* ── TESTIMONIALS ── */
+    #testimonials { background: var(--light); }
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 1.5rem;
+    }
+    .testimonial-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 2rem;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      border-top: 3px solid var(--accent);
+    }
+    .stars { color: #f59e0b; font-size: 1.125rem; letter-spacing: 3px; }
+    .testimonial-card blockquote {
+      font-style: italic;
+      color: #475569;
+      line-height: 1.75;
+      font-size: 0.9375rem;
+      flex: 1;
+    }
+    .testimonial-author strong {
+      display: block;
+      color: var(--dark);
+      font-weight: 600;
+      font-style: normal;
+    }
+    .testimonial-author span {
+      font-size: 0.875rem;
+      color: #64748b;
+    }
+
+    /* ── CONTACT ── */
+    #contact { background: var(--white); }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+    .contact-info { display: flex; flex-direction: column; gap: 1.75rem; }
+    .contact-phone {
+      font-size: 2.125rem;
+      font-weight: 900;
+      color: var(--accent);
+      text-decoration: none;
+      display: block;
+      line-height: 1;
+    }
+    .contact-phone:hover { opacity: 0.85; }
+    .contact-email {
+      font-size: 1rem;
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .contact-email:hover { text-decoration: underline; }
+    .info-block { display: flex; flex-direction: column; gap: 0.375rem; }
+    .info-block h4 {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      color: #94a3b8;
+      margin-bottom: 0.25rem;
+    }
+    .info-block p { font-size: 0.9375rem; color: var(--dark); }
+    .hours-table { display: flex; flex-direction: column; }
+    .hours-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #e2e8f0;
+      font-size: 0.9rem;
+    }
+    .hours-row:last-child { border-bottom: none; }
+    .hours-row span:first-child { font-weight: 500; color: #475569; }
+
+    /* ── CONTACT FORM ── */
+    .contact-form { display: flex; flex-direction: column; gap: 1.25rem; }
+    .form-group { display: flex; flex-direction: column; gap: 0.375rem; }
+    .form-group label { font-size: 0.875rem; font-weight: 600; color: var(--dark); }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      border: 1.5px solid #cbd5e1;
+      border-radius: var(--radius);
+      padding: 0.75rem 1rem;
+      font-size: 0.9375rem;
+      font-family: inherit;
+      color: var(--dark);
+      background: var(--white);
+      transition: border-color 0.2s, box-shadow 0.2s;
+      appearance: none;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(27,58,92,0.10);
+    }
+    .form-group textarea { resize: vertical; min-height: 110px; }
+    .form-disclaimer { font-size: 0.75rem; color: #94a3b8; text-align: center; }
+    .form-success {
+      background: #f0fdf4;
+      border: 1.5px solid #86efac;
+      border-radius: var(--radius);
+      padding: 2.5rem;
+      text-align: center;
+    }
+    .form-success h3 { color: #166534; font-size: 1.25rem; margin-bottom: 0.5rem; }
+    .form-success p { color: #166534; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--dark);
+      color: rgba(255,255,255,0.70);
+      padding: 4rem 0 0;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 3rem;
+      padding-bottom: 3rem;
+    }
+    .footer-brand {
+      font-size: 1.3rem;
+      font-weight: 900;
+      color: var(--white);
+      margin-bottom: 0.75rem;
+    }
+    .footer-brand em { font-style: normal; color: var(--accent); }
+    .footer-tagline {
+      font-size: 0.9375rem;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.65;
+    }
+    footer h4 {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+    footer ul { list-style: none; display: flex; flex-direction: column; gap: 0.625rem; }
+    footer ul a {
+      color: rgba(255,255,255,0.60);
+      text-decoration: none;
+      font-size: 0.9375rem;
+      transition: color 0.2s;
+    }
+    footer ul a:hover { color: var(--white); }
+    footer p { font-size: 0.9375rem; color: rgba(255,255,255,0.60); }
+    footer a { color: rgba(255,255,255,0.60); text-decoration: none; transition: color 0.2s; }
+    footer a:hover { color: var(--white); }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding: 1.25rem 0;
+      text-align: center;
+      font-size: 0.8125rem;
+      color: rgba(255,255,255,0.35);
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .trust-bar .container { gap: 1rem 1.5rem; }
+      .trust-item { font-size: 0.85rem; }
+    }
+    @media (max-width: 480px) {
+      .header-phone { font-size: 0.9375rem; }
+      #hero h1 { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="container">
+    <div class="logo">
+      <span class="logo-main"><em>J&amp;M</em> Construction Services</span>
+      <span class="logo-sub">North Texas</span>
+    </div>
+    <nav class="header-right">
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="tel:682-468-6428" class="header-phone">&#9742;&nbsp;682-468-6428</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">&#9733;&nbsp;Serving North Texas</div>
+    <h1>Quality Construction Done Right, Every Time</h1>
+    <p class="hero-subtitle">J&amp;M Construction Services brings skilled craftsmanship and dependable work to homeowners and property owners across North Texas — from demolition to flawless finish work.</p>
+    <div class="cta-group">
+      <a href="tel:682-468-6428" class="btn btn-accent">Call for a Free Estimate</a>
+      <span class="cta-subtext">No obligation — response within 24 hours</span>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="container">
+    <div class="trust-item"><span class="check">&#10003;</span> Owner-Operated</div>
+    <div class="trust-item"><span class="check">&#10003;</span> Free Estimates</div>
+    <div class="trust-item"><span class="check">&#10003;</span> Quality Craftsmanship</div>
+    <div class="trust-item"><span class="check">&#10003;</span> North Texas Proud</div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">What We Do</span>
+      <h2>Our Services</h2>
+      <p>From demolition to finish work — we handle it all with skill and care.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+  <div class="service-icon">🗑️</div>
+  <h3>Junk Removal</h3>
+  <p>Unwanted debris and clutter slow down your project and take up valuable space on your property. J&amp;M hauls everything away quickly and completely, leaving your space clean and ready for what comes next.</p>
+  <span class="service-highlight">Fast same-day hauling available</span>
+</div>
+<div class="service-card">
+  <div class="service-icon">🔨</div>
+  <h3>Demolition</h3>
+  <p>Safely clearing the old structure is the critical first step to building something better on your property. Julius and his crew handle interior and structural demo with precision, proper cleanup, and zero shortcuts.</p>
+  <span class="service-highlight">Full site cleanup included</span>
+</div>
+<div class="service-card">
+  <div class="service-icon">🪵</div>
+  <h3>Flooring</h3>
+  <p>Worn or outdated floors reduce the comfort and value of your home more than almost anything else. J&amp;M installs hardwood, laminate, and vinyl plank flooring with expert attention to detail that stands the test of time.</p>
+  <span class="service-highlight">All flooring types installed</span>
+</div>
+<div class="service-card">
+  <div class="service-icon">🔲</div>
+  <h3>Tile Work</h3>
+  <p>From bathroom floors to kitchen backsplashes, precise tile work is one of the most impactful upgrades you can make to your home. J&amp;M cuts, sets, and groutes every tile to a clean, professional finish you will be proud of.</p>
+  <span class="service-highlight">Bathroom, kitchen and more</span>
+</div>
+<div class="service-card">
+  <div class="service-icon">🏡</div>
+  <h3>Fencing</h3>
+  <p>A well-built fence gives your North Texas property the privacy, security, and curb appeal it deserves. J&amp;M installs wood and privacy fencing that is built to last through the Texas heat and weather.</p>
+  <span class="service-highlight">Free fence estimates</span>
+</div>
+<div class="service-card">
+  <div class="service-icon">🪚</div>
+  <h3>Finish Carpentry</h3>
+  <p>The trim, baseboards, and finish details are what separate a good renovation from a great one in your home. J&amp;M brings true craftsmanship to every corner, molding, and custom woodwork detail — because the finish matters.</p>
+  <span class="service-highlight">Custom trim and molding work</span>
+</div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Customer Reviews</span>
+      <h2>What Our Customers Say</h2>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+  <div class="stars">★★★★★</div>
+  <blockquote>Julius came out the same week and removed all the debris from our bathroom remodel — two truckloads gone in a few hours. He was on time, professional, and left the site spotless. Will absolutely call J&amp;M again for our next project.</blockquote>
+  <div class="testimonial-author">
+    <strong>Sandra M.</strong>
+    <span>Denton, TX</span>
+  </div>
+</div>
+<div class="testimonial-card">
+  <div class="stars">★★★★★</div>
+  <blockquote>We needed our backyard privacy fence replaced before summer. J&amp;M gave us a fair quote, showed up on schedule, and the cedar fence they built is rock solid and looks fantastic. Julius was professional and communicative the whole way through.</blockquote>
+  <div class="testimonial-author">
+    <strong>David R.</strong>
+    <span>Fort Worth, TX</span>
+  </div>
+</div>
+<div class="testimonial-card">
+  <div class="stars">★★★★★</div>
+  <blockquote>After a water leak damaged our living room floor, Julius installed new laminate throughout the main level in two days. He cleaned up every evening and the finished floors look brand new. Honest pricing, great work — exactly what you want in a contractor.</blockquote>
+  <div class="testimonial-author">
+    <strong>Patricia L.</strong>
+    <span>Arlington, TX</span>
+  </div>
+</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Get In Touch</span>
+      <h2>Ready to Start Your Project</h2>
+      <p>Call Julius directly or send a message below — we respond quickly with a free, no-obligation estimate.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div>
+          <a href="tel:682-468-6428" class="contact-phone">&#9742;&nbsp;682-468-6428</a>
+        </div>
+        <div>
+          <a href="mailto:JMconstruction316@gmail.com" class="contact-email">JMconstruction316@gmail.com</a>
+        </div>
+        <div class="info-block">
+          <h4>Service Area</h4>
+          <p>Serving North Texas</p>
+        </div>
+        <div class="info-block">
+          <h4>Business Hours</h4>
+          <div class="hours-table">
+            <div class="hours-row"><span>Mon &ndash; Fri</span><span>8:00 AM – 6:00 PM</span></div>
+            <div class="hours-row"><span>Saturday</span><span>9:00 AM – 4:00 PM</span></div>
+            <div class="hours-row"><span>Sunday</span><span>By appointment</span></div>
+          </div>
+        </div>
+      </div>
+      <form class="contact-form" id="contact-form" novalidate>
+        <div class="form-group">
+          <label for="fname">Your Name</label>
+          <input type="text" id="fname" name="name" required placeholder="Jane Smith">
+        </div>
+        <div class="form-group">
+          <label for="fphone">Phone Number</label>
+          <input type="tel" id="fphone" name="phone" required placeholder="(682) 000-0000">
+        </div>
+        <div class="form-group">
+          <label for="fservice">Service Needed</label>
+          <select id="fservice" name="service">
+            <option value="">&#8212; Select a service &#8212;</option>
+<option value="Junk Removal">Junk Removal</option>
+<option value="Demolition">Demolition</option>
+<option value="Flooring">Flooring</option>
+<option value="Tile Work">Tile Work</option>
+<option value="Fencing">Fencing</option>
+<option value="Finish Carpentry">Finish Carpentry</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="fmessage">Describe Your Project</label>
+          <textarea id="fmessage" name="message" rows="4" placeholder="Tell us a bit about what you need..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-accent btn-full">Send My Request</button>
+        <p class="form-disclaimer">We respond within 24 hours on business days.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container footer-grid">
+    <div>
+      <div class="footer-brand"><em>J&amp;M</em> Construction Services</div>
+      <p class="footer-tagline">Built with pride across North Texas.</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
+        <li><a href="#contact">Get a Quote</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p><a href="tel:682-468-6428">682-468-6428</a></p>
+      <p><a href="mailto:JMconstruction316@gmail.com">JMconstruction316@gmail.com</a></p>
+      <p style="margin-top:0.5rem;">Serving North Texas</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <p>&copy; 2026 J&amp;M Construction Services &mdash; Serving North Texas</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      var target = document.querySelector(a.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  var form = document.getElementById('contact-form');
+  if (form) {
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      var phoneVal = document.getElementById('fphone') ? document.getElementById('fphone').value : '';
+      this.innerHTML =
+        '<div class="form-success">' +
+        '<h3>&#10003; Request Received!</h3>' +
+        '<p>Thank you! Julius will be in touch shortly' +
+        (phoneVal ? ' at ' + phoneVal : '') + '.</p>' +
+        '</div>';
+    });
+  }
+</script>
+</body>
+</html>
