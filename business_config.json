@@ -1,0 +1,68 @@
+{
+  "business": {
+    "name": "J&M Construction Services",
+    "type": "construction services",
+    "owner_name": "Julius Kelley",
+    "license_number": ""
+  },
+  "contact": {
+    "phone": "682-468-6428",
+    "email": "JMconstruction316@gmail.com",
+    "address": "",
+    "city": "North Texas",
+    "state": "TX",
+    "zip": "",
+    "service_area": "Serving North Texas"
+  },
+  "hours": {
+    "weekdays": "8:00 AM – 6:00 PM",
+    "saturday": "9:00 AM – 4:00 PM",
+    "sunday": "By appointment"
+  },
+  "services": [
+    {
+      "name": "Junk Removal",
+      "keywords": ["debris removal", "haul away", "cleanout", "clutter"]
+    },
+    {
+      "name": "Demolition",
+      "keywords": ["interior demo", "teardown", "safe structural removal"]
+    },
+    {
+      "name": "Flooring",
+      "keywords": ["hardwood", "laminate", "vinyl plank", "installation", "replacement"]
+    },
+    {
+      "name": "Tile Work",
+      "keywords": ["bathroom tile", "kitchen backsplash", "floor tile", "grout"]
+    },
+    {
+      "name": "Fencing",
+      "keywords": ["wood fence", "privacy fence", "fence installation", "repair"]
+    },
+    {
+      "name": "Finish Carpentry",
+      "keywords": ["trim", "baseboards", "crown molding", "custom woodwork", "cabinetry"]
+    }
+  ],
+  "differentiators": [
+    "Owner-operated — Julius personally oversees every job",
+    "Serving North Texas with pride and reliability",
+    "Quality craftsmanship at honest, fair prices",
+    "Free estimates with no obligation",
+    "Handles everything from demo to finishing touches"
+  ],
+  "theme": {
+    "primary_color": "#1B3A5C",
+    "accent_color": "#D4A843",
+    "dark_color": "#111827",
+    "light_bg": "#F8F9FA"
+  },
+  "social": {
+    "google_maps_url": "https://maps.google.com/?q=North+Texas"
+  },
+  "meta": {
+    "page_title": "J&M Construction Services | North Texas Contractor",
+    "meta_description": "J&M Construction Services — North Texas. Junk removal, demolition, flooring, tile work, fencing, and finish carpentry. Owner-operated. Call 682-468-6428 for a free estimate."
+  }
+}
